@@ -21,6 +21,9 @@ const Navbar = () => {
         <li className='font-bold'><NavLink to="/" >Home</NavLink></li>
         <li className='font-bold'><NavLink to="/login" >Login</NavLink></li>
         <li className='font-bold'><NavLink to="/register" >Register</NavLink></li>
+        <li className='font-bold'><NavLink to="/allarts" >All Arts & Craft</NavLink></li>
+        <li className='font-bold'><NavLink to="/addcraftitem" >Add Craft Item</NavLink></li>
+        <li className='font-bold'><NavLink to="/myartcraft" >My Art Craft</NavLink></li>
 
     </>
 
