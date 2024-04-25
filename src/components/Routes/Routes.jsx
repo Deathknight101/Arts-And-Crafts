@@ -34,7 +34,8 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/allarts',
-                element: <AllArts></AllArts>
+                element: <AllArts></AllArts>,
+                loader: () => fetch('http://localhost:5000/userartscraft')
             },
             {
                 path: '/addcraftitem',
