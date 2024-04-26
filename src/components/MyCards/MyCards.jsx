@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 
+import { Link } from 'react-router-dom';
 
-const ArtsCards = ({ art }) => {
+const MyCards = ({ art }) => {
     const { name, price, rating, customization, stock, description, photo, userName, email, time, _id, sub_catagory } = art;
 
     return (
@@ -17,6 +17,12 @@ const ArtsCards = ({ art }) => {
                     <Link to={`/arts/${_id}`}>
                         <button className="btn btn-primary">View Details</button>
                     </Link>
+                    <Link to={`/updatearts/${_id}`}>
+                        <button className="btn bg-green-500 text-white">Update</button>
+                    </Link>
+                    <Link to={`/arts/${_id}`}>
+                        <button className="btn bg-red-500 text-white">Delete</button>
+                    </Link>
 
                 </div>
             </div>
@@ -24,4 +30,4 @@ const ArtsCards = ({ art }) => {
     );
 };
 
-export default ArtsCards;
+export default MyCards;

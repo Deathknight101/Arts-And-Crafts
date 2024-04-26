@@ -11,7 +11,7 @@ const AllArts = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>ID</th>
                             <th>Name</th>
                             <th>Price</th>
                             <th>Stock</th>
@@ -23,7 +23,7 @@ const AllArts = () => {
                         {
                             allarts.map(art =>
                                 <tr key={art}>
-                                    <th>1</th>
+                                    <th>{art._id}</th>
                                     <td>{art.name}</td>
                                     <td>{art.price}</td>
                                     <td>{art.stock}</td>

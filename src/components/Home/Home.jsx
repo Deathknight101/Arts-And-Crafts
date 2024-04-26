@@ -17,11 +17,13 @@ const Home = () => {
             </Helmet>
             <h1 className='text-3xl'>HOME {arts.length}</h1>
             <Banner></Banner>
+            <h1 className="text-5xl font-bold mb-5">Craft Item</h1>
             <div className="grid md:grid-cols-3 gap-3 mb-10">
                 {
                     arts.map(art => <ArtsCards key={art._id} art={art}></ArtsCards>)
                 }
             </div>
+            <h1 className="text-5xl font-bold mb-5">Art & Craft Categories</h1>
 
 
         </div>

@@ -9,6 +9,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import AddCraftItem from "../AddCraftItem/AddCraftItem";
 import MyArtCraft from "../MyArtCraft/MyArtCraft";
 import ArtsDetails from "../ArtsDetails/ArtsDetails";
+import UpdateArts from "../UpdateArts/UpdateArts";
 
 const routes = createBrowserRouter([
     {
@@ -22,7 +23,10 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/arts/:id',
-                element: <PrivateRoutes><ArtsDetails></ArtsDetails></PrivateRoutes>
+                element: <PrivateRoutes><ArtsDetails></ArtsDetails></PrivateRoutes>,
+                loader: () => fetch('http://localhost:5000/artscraft')
+
+
             },
             {
                 path: '/login',
@@ -35,7 +39,7 @@ const routes = createBrowserRouter([
             {
                 path: '/allarts',
                 element: <AllArts></AllArts>,
-                loader: () => fetch('http://localhost:5000/userartscraft')
+                loader: () => fetch('http://localhost:5000/artscraft')
             },
             {
                 path: '/addcraftitem',
@@ -44,6 +48,11 @@ const routes = createBrowserRouter([
             {
                 path: '/myartcraft',
                 element: <PrivateRoutes><MyArtCraft></MyArtCraft></PrivateRoutes>
+            },
+            {
+                path: 'updatearts/:id',
+                element: <PrivateRoutes><UpdateArts></UpdateArts></PrivateRoutes>,
+                loader: ({params})=>fetch(`http://localhost:5000/artscraft/${params.id}`)
             },
         ]
     }
