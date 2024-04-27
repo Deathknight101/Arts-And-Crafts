@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import { useLoaderData } from "react-router-dom";
 import ArtsCards from "../ArtsCards/ArtsCards";
+import Category from "../Category/Category";
 
 
 
@@ -9,6 +10,7 @@ const Home = () => {
 
 
     const arts = useLoaderData();
+
 
     return (
         <div>
@@ -24,6 +26,7 @@ const Home = () => {
                 }
             </div>
             <h1 className="text-5xl font-bold mb-5">Art & Craft Categories</h1>
+            <Category></Category>
 
 
         </div>

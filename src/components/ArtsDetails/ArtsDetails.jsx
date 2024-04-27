@@ -16,7 +16,7 @@ const ArtsDetails = () => {
                 <div className="flex gap-12 flex-col 
                 ">
                     <div className="flex-1 p-4">
-                        <img className="aspect-video rounded-xl" src={art.photo} alt="" />
+                        <img className="aspect-video rounded-xl object-cover" src={art.photo} alt="" />
                     </div>
                     <div className="flex-1 p-4">
                         <h1 className="mb-4 text-4xl font-bold font-heading">

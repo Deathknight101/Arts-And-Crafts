@@ -11,6 +11,7 @@ import MyArtCraft from "../MyArtCraft/MyArtCraft";
 import ArtsDetails from "../ArtsDetails/ArtsDetails";
 import UpdateArts from "../UpdateArts/UpdateArts";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import CategoryCrafts from "../CategoryCrafts/CategoryCrafts";
 
 const routes = createBrowserRouter([
     {
@@ -55,6 +56,11 @@ const routes = createBrowserRouter([
                 path: '/updatearts/:id',
                 element: <PrivateRoutes><UpdateArts></UpdateArts></PrivateRoutes>,
                 loader: ({params})=>fetch(`http://localhost:5000/artscraft/${params.id}`)
+            },
+            {
+                path: '/categorycrafts/:category',
+                element: <PrivateRoutes><CategoryCrafts></CategoryCrafts></PrivateRoutes>,
+                loader: ({params})=>fetch(`http://localhost:5000/artscraft/${params.category}`)
             },
         ]
     }

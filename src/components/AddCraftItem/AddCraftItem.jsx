@@ -26,7 +26,7 @@ const AddCraftItem = () => {
         const email = form.email.value;
         const time = form.time.value;
         const photo = form.photo.value;
-        const sub_catagory = form.sub_catagory.value;
+        const sub_catagory = form.sub_catagory.value.toUpperCase();
 
         const newCraft = { name, price, rating, customization, stock, description, photo, userName, email, time, sub_catagory }
         console.log(newCraft);
@@ -44,6 +44,17 @@ const AddCraftItem = () => {
                 console.log(data);
                 if (data.insertedId) {
                     toast.success('added successfully')
+                    fetch('http://localhost:5000/category', {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify({ category: sub_catagory })
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                        })
                 }
             })
 

@@ -48,6 +48,7 @@ const MyCards = ({ art, setReloadData }) => {
                 <p>Price: ${price}</p>
                 <p>Rating: {rating}</p>
                 <p>Stock: {stock}</p>
+                <p>Customization: {customization}</p>
                 <p>Sub-Category: {sub_catagory}</p>
                 <div className="card-actions justify-start">
                     <Link to={`/arts/${_id}`}>
