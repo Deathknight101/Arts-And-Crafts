@@ -13,7 +13,7 @@ const ArtsDetails = () => {
         return (
             <>
 
-                <div className="flex gap-12 flex-col 
+                <div className="flex gap-12  
                 ">
                     <div className="flex-1 p-4">
                         <img className="aspect-video rounded-xl object-cover" src={art.photo} alt="" />
