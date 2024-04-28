@@ -33,7 +33,7 @@ const AddCraftItem = () => {
         console.log(newCraft);
 
         //send data to the server
-        fetch('http://localhost:5000/artscraft', {
+        fetch('https://b9-a10-server-three.vercel.app/artscraft', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -45,7 +45,7 @@ const AddCraftItem = () => {
                 console.log(data);
                 if (data.insertedId) {
                     toast.success('added successfully')
-                    fetch('http://localhost:5000/category', {
+                    fetch('https://b9-a10-server-three.vercel.app/category', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

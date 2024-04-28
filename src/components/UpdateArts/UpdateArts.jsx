@@ -35,7 +35,7 @@ const UpdateArts = () => {
         console.log(updateCraft);
 
         //send data to the server
-        fetch(`http://localhost:5000/artscraft/${_id}`, {
+        fetch(`https://b9-a10-server-three.vercel.app/artscraft/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

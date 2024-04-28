@@ -20,7 +20,7 @@ const MyCards = ({ art, setReloadData }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/artscraft/${_id}`, {
+                fetch(`https://b9-a10-server-three.vercel.app/artscraft/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

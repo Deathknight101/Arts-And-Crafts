@@ -22,12 +22,12 @@ const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/artscraft')
+                loader: () => fetch('https://b9-a10-server-three.vercel.app/artscraft')
             },
             {
                 path: '/arts/:id',
                 element: <PrivateRoutes><ArtsDetails></ArtsDetails></PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/artscraft')
+                loader: () => fetch('https://b9-a10-server-three.vercel.app/artscraft')
 
 
             },
@@ -42,7 +42,7 @@ const routes = createBrowserRouter([
             {
                 path: '/allarts',
                 element: <AllArts></AllArts>,
-                loader: () => fetch('http://localhost:5000/artscraft')
+                loader: () => fetch('https://b9-a10-server-three.vercel.app/artscraft')
             },
             {
                 path: '/addcraftitem',
@@ -55,12 +55,12 @@ const routes = createBrowserRouter([
             {
                 path: '/updatearts/:id',
                 element: <PrivateRoutes><UpdateArts></UpdateArts></PrivateRoutes>,
-                loader: ({params})=>fetch(`http://localhost:5000/artscraft/getexistingdata/${params.id}`)
+                loader: ({params})=>fetch(`https://b9-a10-server-three.vercel.app/artscraft/getexistingdata/${params.id}`)
             },
             {
                 path: '/categorycrafts/:category',
                 element: <PrivateRoutes><CategoryCrafts></CategoryCrafts></PrivateRoutes>,
-                loader: ({params})=>fetch(`http://localhost:5000/artscraft/${params.category}`)
+                loader: ({params})=>fetch(`https://b9-a10-server-three.vercel.app/artscraft/${params.category}`)
             },
         ]
     }

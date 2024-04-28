@@ -15,7 +15,7 @@ const MyArtCraft = () => {
     const { user } = useContext(AuthContext);
     useEffect(() => {
 
-        fetch(`http://localhost:5000/user/artscraft/${user.email}`)
+        fetch(`https://b9-a10-server-three.vercel.app/user/artscraft/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 if (filter === 'all') {

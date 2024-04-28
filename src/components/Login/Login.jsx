@@ -21,7 +21,7 @@ const Login = () => {
                 const createdAt = result?.user?.metadata.creationTime
 
                 const user = { email: result.user.email, createdAt: createdAt };
-                fetch('http://localhost:5000/user', {
+                fetch('https://b9-a10-server-three.vercel.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -47,7 +47,7 @@ const Login = () => {
                 const createdAt = result?.user?.metadata.creationTime
 
                 const user = { email: result.user.email, createdAt: createdAt };
-                fetch('http://localhost:5000/user', {
+                fetch('https://b9-a10-server-three.vercel.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
