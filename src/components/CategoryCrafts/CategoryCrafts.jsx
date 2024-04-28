@@ -6,7 +6,7 @@ const CategoryCrafts = () => {
     const arts = useLoaderData()
     console.log(arts);
     return (
-        <div className="grid md:grid-cols-3 gap-3 mb-10 mt-10">
+        <div className="grid md:grid-cols-3 gap-3 mb-10 mt-10 bg-green-400">
             {
                 arts.map(art => <ArtsCards key={art._id} art={art}></ArtsCards>)
             }

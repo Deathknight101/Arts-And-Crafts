@@ -1,5 +1,7 @@
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip'
 
 import { toast } from 'sonner';
 import { AuthContext } from '../Providers/AuthProviders';
@@ -34,7 +36,7 @@ const Navbar = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[50] p-2 shadow bg-base-100 rounded-box w-52">
                         {navLinks}
                     </ul>
                 </div>
@@ -45,17 +47,19 @@ const Navbar = () => {
                     {navLinks}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end ">
                 {
                     user ? <>
 
-                        <div className="dropdown dropdown-end">
-                            <div tabIndex={0} role="button" className="tooltip tooltip-bottom btn btn-ghost btn-circle avatar" data-tip={user.displayName
+                        <div className="dropdown dropdown-end md:mr-3">
+                            <div tabIndex={0} role="button" data-tooltip-id='display-tooltip' className=" btn btn-ghost btn-circle avatar z-50" data-tooltip-html={user.displayName
                             }>
+                                <Tooltip id="display-tooltip" />
                                 <div className="w-10 rounded-full" data-tip="hello">
                                     <img alt="photo" src={user.photoURL} />
                                 </div>
                             </div>
+
                         </div>
 
                     </> : <>

@@ -55,7 +55,7 @@ const routes = createBrowserRouter([
             {
                 path: '/updatearts/:id',
                 element: <PrivateRoutes><UpdateArts></UpdateArts></PrivateRoutes>,
-                loader: ({params})=>fetch(`http://localhost:5000/artscraft/${params.id}`)
+                loader: ({params})=>fetch(`http://localhost:5000/artscraft/getexistingdata/${params.id}`)
             },
             {
                 path: '/categorycrafts/:category',

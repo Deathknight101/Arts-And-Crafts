@@ -10,8 +10,9 @@ const UpdateArts = () => {
 
     const existingData = useLoaderData();
     const { name, price, rating, customization, stock, description, photo, userName, email, time, _id, sub_catagory } = existingData;
+    console.log(existingData);
 
-    const handleUpdateCoffee  = event => {
+    const handleCraftUpdate  = event => {
         event.preventDefault();
 
         const form = event.target;
@@ -54,8 +55,8 @@ const UpdateArts = () => {
     return (
         <div>
             <div className="bg-white md:p-24">
-                <h2 className="text-3xl font-extrabold">Update New Craft : {name}</h2>
-                <form onSubmit={handleUpdateCoffee}>
+                <h2 className="text-3xl font-extrabold">Update Craft : {name}</h2>
+                <form onSubmit={handleCraftUpdate}>
                     {/* form row 1*/}
                     <div className="md:flex mb-8 gap-2">
                         <div className="md:w-1/2 ">

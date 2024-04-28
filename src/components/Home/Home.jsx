@@ -3,6 +3,8 @@ import Banner from "../Banner/Banner";
 import { useLoaderData } from "react-router-dom";
 import ArtsCards from "../ArtsCards/ArtsCards";
 import Category from "../Category/Category";
+import FeaturedSection from "../../FeaturedSection/FeaturedSection";
+import Faq from "../../FAQ/Faq";
 
 
 
@@ -14,10 +16,11 @@ const Home = () => {
 
     return (
         <div>
+            
             <Helmet>
                 <title>Home</title>
             </Helmet>
-            <h1 className='text-3xl'>HOME {arts.length}</h1>
+            
             <Banner></Banner>
             <h1 className="text-5xl font-bold mb-5">Craft Item</h1>
             <div className="grid md:grid-cols-3 gap-3 mb-10">
@@ -27,7 +30,8 @@ const Home = () => {
             </div>
             <h1 className="text-5xl font-bold mb-5">Art & Craft Categories</h1>
             <Category></Category>
-
+            <FeaturedSection></FeaturedSection>
+            <Faq></Faq>
 
         </div>
     );
