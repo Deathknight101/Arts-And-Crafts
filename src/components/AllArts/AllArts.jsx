@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 const AllArts = () => {
     const allarts = useLoaderData();
     return (
-        <div>
+        <div className="mb-10">
             <h1 className="text-5xl font-bold mb-5 mt-5"><Typewriter words={['Arts and crafts']}
                 loop={5}
                 cursor

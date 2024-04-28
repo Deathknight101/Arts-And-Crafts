@@ -18,9 +18,23 @@ const Login = () => {
     const handGithubLogin = () => {
         signinWithGitHub()
             .then(result => {
-                console.log(result)
-                toast.success('Login Successfull')
-                navigate(location?.state ? location.state : '/');
+                const createdAt = result?.user?.metadata.creationTime
+
+                const user = { email: result.user.email, createdAt: createdAt };
+                fetch('http://localhost:5000/user', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    }, body: JSON.stringify(user)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+
+                        console.log(data);
+                        toast.success('Login Successfull')
+                        navigate(location?.state ? location.state : '/');
+                    })
+
             })
 
             .catch(error =>
@@ -30,9 +44,23 @@ const Login = () => {
     const handleGoogleLogin = () => {
         signInWithGoogle()
             .then(result => {
-                console.log(result)
-                toast.success('Login Successfull')
-                navigate(location?.state ? location.state : '/');
+                const createdAt = result?.user?.metadata.creationTime
+
+                const user = { email: result.user.email, createdAt: createdAt };
+                fetch('http://localhost:5000/user', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    }, body: JSON.stringify(user)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+
+                        console.log(data);
+                        toast.success('Login Successfull')
+                        navigate(location?.state ? location.state : '/');
+                    })
+
             })
 
             .catch(error =>

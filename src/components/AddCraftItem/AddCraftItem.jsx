@@ -61,7 +61,7 @@ const AddCraftItem = () => {
 
     }
     return (
-        <div>
+        <div className="mb-10">
             <div className="bg-white md:p-24">
                 <h2 className="text-5xl font-bold mb-10 "><Typewriter words={['Add New Craft']}
                 loop={5}
