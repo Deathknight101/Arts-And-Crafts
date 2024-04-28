@@ -1,9 +1,17 @@
+import { Typewriter } from "react-simple-typewriter";
 
 
 const Faq = () => {
     return (
         <div className='mb-10'>
-            <h1 className="md:text-5xl text-4xl font-bold mb-10 ">Frequently Asked Questions(FAQ)</h1>
+            <h1 className="md:text-5xl text-4xl font-bold mb-10 "><Typewriter words={['Frequently Asked Questions(FAQ)']}
+                loop={5}
+                cursor
+                cursorStyle='_'
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={5000}
+            ></Typewriter> </h1>
             <div className='space-y-3'>
                 <div className="collapse bg-base-200">
                     <input type="radio" name="my-accordion-1" defaultChecked />

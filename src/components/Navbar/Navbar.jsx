@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip } from 'react-tooltip'
-
+import { Typewriter } from 'react-simple-typewriter';
 import { toast } from 'sonner';
 import { AuthContext } from '../Providers/AuthProviders';
 
@@ -40,7 +40,14 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost md:text-xl  font-bold">John's-Painting</a>
+                <a className="btn btn-ghost md:text-xl text-sm  font-bold"><Typewriter  words={[`John's-Arts`]}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={5000}
+           ></Typewriter></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

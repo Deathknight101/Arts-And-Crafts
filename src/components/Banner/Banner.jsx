@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {
     return (
@@ -31,7 +32,14 @@ const Banner = () => {
             </Swiper>
 
             <div className='absolute w-full h-1/2 bg-black bottom-[25%] z-10 bg-opacity-60 flex flex-col gap-y-1 md:gap-y-10 justify-center items-center'>
-                <h1 className='font-bold text-sm md:text-5xl text-center text-white font-mono'>Discover Your Inner Artist!</h1>
+                <h1 className='font-bold text-sm md:text-5xl text-center text-white font-mono'><Typewriter words={[`Discover Your Inner Artist!`]}
+                    loop={5}
+                    cursor
+                    cursorStyle='_'
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={3000}
+                ></Typewriter> </h1>
                 <button className='btn text-black bg-white border-white hover:bg-white hover:border-black btn-xs md:btn-lg uppercase font-mono rounded-none'>Explore</button>
             </div>
 
