@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
 import ArtsCards from "../ArtsCards/ArtsCards";
 import MyCards from "../MyCards/MyCards";
+import { Typewriter } from "react-simple-typewriter";
 
 
 const MyArtCraft = () => {
@@ -50,7 +51,14 @@ const MyArtCraft = () => {
 
                 </select>
             </div>
-            <h1>My Art Craft</h1>
+            <h2 className="text-5xl font-bold mb-10 "><Typewriter words={['My Art Craft']}
+                loop={5}
+                cursor
+                cursorStyle='_'
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={5000}
+            ></Typewriter> </h2>
             <div className="grid md:grid-cols-3 gap-3 mb-10">
                 {
                     mydata.map(data => <MyCards key={data._id} art={data}

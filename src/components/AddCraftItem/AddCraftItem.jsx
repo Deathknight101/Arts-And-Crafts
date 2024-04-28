@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { toast } from "sonner";
 import { AuthContext } from "../Providers/AuthProviders";
 import { useForm } from "react-hook-form";
+import { Typewriter } from "react-simple-typewriter";
 
 
 const AddCraftItem = () => {
@@ -62,7 +63,14 @@ const AddCraftItem = () => {
     return (
         <div>
             <div className="bg-white md:p-24">
-                <h2 className="text-3xl font-extrabold">Add New Craft</h2>
+                <h2 className="text-5xl font-bold mb-10 "><Typewriter words={['Add New Craft']}
+                loop={5}
+                cursor
+                cursorStyle='_'
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={5000}
+            ></Typewriter> </h2>
                 <form onSubmit={handleAddCraft}>
                     {/* form row 1*/}
                     <div className="md:flex mb-8 gap-2">

@@ -40,14 +40,14 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost md:text-xl text-sm  font-bold"><Typewriter  words={[`John's-Arts`]}
-            loop={5}
-            cursor
-            cursorStyle='_'
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={5000}
-           ></Typewriter></a>
+                <a className="btn btn-ghost md:text-xl text-sm  font-bold"><Typewriter words={[`Crafty Corner`]}
+                    loop={5}
+                    cursor
+                    cursorStyle='_'
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={5000}
+                ></Typewriter></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
