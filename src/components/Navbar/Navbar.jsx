@@ -66,7 +66,7 @@ const Navbar = () => {
                                     <img alt="photo" src={user.photoURL} />
                                 </div>
                             </div>
-                            <Tooltip id="display-tooltip" />
+
 
                         </div>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
                     </Link>
             }
 
-
+            <Tooltip className='z-50' id="display-tooltip" />
         </div>
     );
 };

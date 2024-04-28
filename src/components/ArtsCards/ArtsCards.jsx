@@ -13,6 +13,8 @@ const ArtsCards = ({ art }) => {
                 <p>Rating: {rating}</p>
                 <p>Stock: {stock}</p>
                 <p>Sub-Category: {sub_catagory}</p>
+                <p>Processing Time: {time}</p>
+                <p>Description: {description}</p>
                 <div className="card-actions justify-start">
                     <Link to={`/arts/${_id}`}>
                         <button className="btn btn-primary">View Details</button>
