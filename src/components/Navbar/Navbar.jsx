@@ -61,13 +61,15 @@ const Navbar = () => {
                         <div className="dropdown dropdown-end md:mr-3">
                             <div tabIndex={0} role="button" data-tooltip-id='display-tooltip' className=" btn btn-ghost btn-circle avatar z-50" data-tooltip-html={user.displayName
                             }>
-                                <Tooltip id="display-tooltip" />
-                                <div className="w-10 rounded-full" data-tip="hello">
+
+                                <div className="w-10 rounded-full" >
                                     <img alt="photo" src={user.photoURL} />
                                 </div>
                             </div>
+                            <Tooltip id="display-tooltip" />
 
                         </div>
+
 
                     </> : <>
 
