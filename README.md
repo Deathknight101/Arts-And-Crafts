@@ -2,9 +2,9 @@
 
 Website: https://b9a10-paintinganddrawing.web.app
 
-## About Crafty Corner
+## Category
 
-Brush & Canvas is your ultimate online destination for all things painting and drawing. We aim to inspire creativity, self-expression, and artistic exploration through our curated collection of artworks and craft supplies. Whether you're a seasoned artist or a beginner, Brush & Canvas is here to ignite your passion for the visual arts.
+Painting And Drawing
 
 ## Key Features
 
