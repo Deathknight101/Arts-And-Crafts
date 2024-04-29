@@ -14,6 +14,7 @@ Brush & Canvas is your ultimate online destination for all things painting and d
 - **All Craft Item:** Explore our entire collection of craft items from various categories, including landscape paintings, portrait drawings, watercolor paintings, oil paintings, charcoal sketches, and cartoon drawings, all curated to inspire and delight.
 - **Subcategory Section:** Our homepage features a subcategory section, showcasing cards for each category of craft items, allowing users to easily navigate and explore the diverse range of artworks and craft supplies available on Brush & Canvas.
 - **Update Craft Cards:** Registered users can update their craft cards, including images, descriptions, and other details, to keep their listings fresh and engaging for the community.
+- **Light and Dark Theme:** User can toggle from light to dark theme with just a press of a button.
 
 ## Package Implemented
 - **React-simple-typewriter**
