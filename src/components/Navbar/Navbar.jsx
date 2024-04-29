@@ -4,11 +4,15 @@ import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip } from 'react-tooltip'
 import { Typewriter } from 'react-simple-typewriter';
 import { toast } from 'sonner';
+import { IoIosMoon } from "react-icons/io";
+import { MdOutlineWbSunny } from "react-icons/md";
 import { AuthContext } from '../Providers/AuthProviders';
 
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme, darkmode }) => {
     const { user, logOut } = useContext(AuthContext);
+
+
 
     const handleSignOut = () => {
         logOut()
@@ -30,7 +34,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-gray-200 rounded-md mt-4">
+        <div className="navbar bg-gray-200 dark:bg-slate-800 rounded-md ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,14 +44,14 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost md:text-xl text-sm  font-bold"><Typewriter words={[`Crafty Corner`]}
+                <div className="md:ml-3 md:text-xl text-sm  font-bold"><Typewriter words={[`Crafty Corner`]}
                     loop={5}
                     cursor
                     cursorStyle='_'
                     typeSpeed={70}
                     deleteSpeed={50}
                     delaySpeed={5000}
-                ></Typewriter></a>
+                ></Typewriter></div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -55,6 +59,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end ">
+                <div>
+                    <button className={`btn bg-transparent border-none text-3xl ${darkmode ? 'text-yellow-500' : 'text-gray-800'}`} onClick={toggleTheme}>{darkmode ? <><MdOutlineWbSunny></MdOutlineWbSunny></> : <><IoIosMoon></IoIosMoon></>}</button>
+                </div>
                 {
                     user ? <>
 
